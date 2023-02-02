@@ -1,6 +1,6 @@
-# Realtime pizza app using Node-express-mongo-socket.io
+# Alex's Crust - Realtime Pizza Order Tracker
 
-![Realtime Pizza app](/readmeScreenshot.png)
+![Realtime Pizza app](https://raw.github.com/anikxt/Alex-s-Crust/main/readmeScreenshot.png)
 
 ## Installation
 
