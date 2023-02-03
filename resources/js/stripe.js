@@ -4,7 +4,7 @@ import { CardWidget } from './CardWidget';
 
 export async function initStripe() {
   const stripe = await loadStripe(
-    'pk_live_51K6hw1SAdkSlmtvZWkjo0oz4noTJOF3a1kExbJkQcvEyoST4RmUTOyaHJkUAFVKfvz82RjFyJrSg2avHwUzWCOpy00gE3ujmX2'
+    'pk_test_51Hf6vbDfWW6uHRy7b6Upoa4bWhGYmk2ElEN4AiFeqozzlccU6OpAoD9d1oIar3qg9i8ASiOs9ly4rFJQOTPM5MMk00GN7COA2N'
   );
   let card = null;
   // function mountWidget() {
@@ -65,13 +65,18 @@ export async function initStripe() {
       formObject.stripeToken = token.id;
       placeOrder(formObject);
 
-      // // Verify card
-      // stripe.createToken(card).then((result) => {
+      //   Verify card
+      // stripe
+      //   .createToken(card)
+      //   .then((result) => {
       //     formObject.stripeToken = result.token.id;
       //     placeOrder(formObject);
-      // }).catch((err) => {
-      //     console.log(err)
-      // })
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
     });
   }
 }
+
+module.exports = initStripe;
