@@ -61,7 +61,13 @@ export async function initStripe() {
         return;
       }
 
-      const token = await card.createToken();
+      try {
+        const token = await card.createToken();
+        console.log(token);
+      } catch (error) {
+        console.error(error);
+      }
+
       formObject.stripeToken = token.id;
       placeOrder(formObject);
 
@@ -78,5 +84,3 @@ export async function initStripe() {
     });
   }
 }
-
-module.exports = initStripe;
