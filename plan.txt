@@ -44,3 +44,4 @@
         - dependancies socket.io
 [+] Build project for deployment
 [+] Deploy project on live server
+[+] Add deployment link
